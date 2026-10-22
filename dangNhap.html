@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập - PHONE STORE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="register-body">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html" class="tenShop">PHONE STORE</a>
+        <p class="slogan">Công nghệ trong tầm tay</p>
+      </div>
+      <nav class="menu">
+        <a href="index.html" class="menu-link active">Trang chủ</a>
+        <a href="products.html" class="menu-link">Sản phẩm</a>
+        <a href="dangNhap.html" class="menu-link">Tài khoản</a>
+        <a href="cart.html" class="menu-link">Giỏ hàng</a>
+      </nav>
+      <div class="thanhTimKiem">
+        <input type="text" id="timKiem" placeholder="Tìm kiếm iPhone, điện thoại..." />
+        <button type="button" onclick="timKiemSanPham()">Tìm kiếm</button>
+      </div>
+    </header>
+    <main class="register-main">
+      <!-- BÊN TRÁI -->
+      <section class="register-intro">
+        <span class="login-tag">WELCOME BACK</span>
+
+        <h1>Chào mừng bạn trở lại!</h1>
+
+        <p>
+          Đăng nhập để khám phá những mẫu điện thoại mới nhất và tiếp tục trải nghiệm mua sắm tại
+          PHONE STORE.
+        </p>
+
+        <div class="register-phone">
+          <img src="img/nenweb.png" alt="Cửa hàng PHONE STORE" class="anhShop" />
+        </div>
+
+        <div class="register-benefits">
+          <p>✓ Cập nhật sản phẩm mới nhất</p>
+          <p>✓ Quản lý giỏ hàng dễ dàng</p>
+          <p>✓ Trải nghiệm mua sắm tiện lợi</p>
+        </div>
+      </section>
+
+      <!-- BÊN PHẢI -->
+      <section class="register-form-section">
+        <div class="register-box">
+          <div class="login-heading">
+            <span>YOUR ACCOUNT</span>
+            <h2>Đăng nhập</h2>
+            <p>Nhập thông tin để truy cập tài khoản của bạn.</p>
+          </div>
+
+          <form id="formDangNhap">
+            <div class="login-field">
+              <label for="emailDangNhap">Địa chỉ email</label>
+              <input type="email" id="emailDangNhap" placeholder="Nhập email của bạn" required />
+            </div>
+
+            <div class="login-field">
+              <label for="matKhauDangNhap">Mật khẩu</label>
+              <input type="password" id="matKhauDangNhap" placeholder="Nhập mật khẩu" required />
+            </div>
+
+            <p id="thongBaoDangNhap"></p>
+
+            <button type="submit" class="btn-register">Đăng nhập</button>
+          </form>
+
+          <div class="login-bottom">
+            Chưa có tài khoản?
+            <a href="dangKi.html">Đăng ký ngay</a>
+          </div>
+
+          <a href="index.html" class="login-back"> ← Quay về trang chủ </a>
+        </div>
+      </section>
+    </main>
+    <br />
+    <br />
+    <footer class="register-footer">
+      <p>© 2026 PHONE STORE - Điện thoại chính hãng</p>
+      <p>Công nghệ trong tầm tay</p>
+    </footer>
+    <script src="dangNhap.js"></script>
+  </body>
+</html>

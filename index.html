@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHONE STORE - Cửa hàng điện tử</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html" class="tenShop">PHONE STORE</a>
+        <p class="slogan">Công nghệ trong tầm tay</p>
+      </div>
+      <nav class="menu">
+        <a href="index.html" class="menu-link active">Trang chủ</a>
+        <a href="products.html" class="menu-link">Sản phẩm</a>
+        <a href="dangNhap.html" class="menu-link">Tài khoản</a>
+        <a href="cart.html" class="menu-link">Giỏ hàng</a>
+      </nav>
+      <span id="tenNguoiDung"></span>
+      <button id="btnDangXuat" type="button">Đăng xuất</button>
+      <div class="thanhTimKiem">
+        <input type="text" id="timKiem" placeholder="Tìm kiếm iPhone, điện thoại..." />
+        <button type="button" onclick="timKiemSanPham()">Tìm kiếm</button>
+      </div>
+    </header>
+
+    <main class="trangChu">
+      <!-- PHẦN 2: BANNER KHUYẾN MÃI -->
+      <section class="banner-section">
+        <div class="banner-content">
+          <div class="banner-text">
+            <span class="banner-label">ƯU ĐÃI ĐẶC BIỆT</span>
+            <h1>Khám phá thế giới công nghệ</h1>
+            <p>Săn ngay sản phẩm yêu thích với nhiều ưu đãi hấp dẫn tại PHONE STORE.</p>
+            <a href="products.html" class="btn-banner"> Khám phá ngay </a>
+          </div>
+
+          <div class="slider">
+            <div class="slider-image">
+              <img id="anhSlider" src="img/nenweb.png" alt="Sản phẩm khuyến mãi Phone Store" />
+            </div>
+
+            <div class="flash-sale">
+              <h2>🔥 PHONE STORE - FLASH SALE</h2>
+              <p>Ưu đãi kết thúc sau:</p>
+              <h3 id="dongHo">24:00:00</h3>
+            </div>
+
+            <div class="slider-controls">
+              <button id="btnPrev" type="button" aria-label="Ảnh trước">❮</button>
+              <button id="btnNext" type="button" aria-label="Ảnh tiếp theo">❯</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="promotion-info">
+          <img src="img/rinhIP.png" alt="Phone Store" />
+          <h2>Rinh quà công nghệ - Đón trọn ưu đãi</h2>
+          <p>
+            Trúng ngay iPhone 18 Pro 512GB trong chương trình bốc thăm trúng thưởng ngày 20/10/2026.
+          </p>
+          <p class="promotion-note">Nhanh tay tham gia cùng PHONE STORE nhé!</p>
+        </div>
+      </section>
+
+      <!-- PHẦN 3: SẢN PHẨM HOT -->
+      <section class="product-1">
+        <div class="section-1">
+          <span class="section-1">ĐƯỢC YÊU THÍCH</span>
+          <h2>Sản phẩm HOT</h2>
+          <p>Những sản phẩm được khách hàng quan tâm hiện nay.</p>
+        </div>
+
+        <div id="products-hot" class="product-list"></div>
+      </section>
+
+      <!-- PHẦN 4: SẢN PHẨM MỚI -->
+      <section class="product-2">
+        <div class="section-2">
+          <span class="section-2">CÔNG NGHỆ MỚI</span>
+          <h2>Sản phẩm mới</h2>
+          <p>Cập nhật những thiết bị công nghệ mới nhất tại cửa hàng.</p>
+        </div>
+        <div id="products-new" class="product-list"></div>
+      </section>
+
+      <!-- PHẦN 5: SẢN PHẨM KHUYẾN MÃI -->
+      <section class="product-3">
+        <div class="section-3">
+          <span class="section-3">ƯU ĐÃI HẤP DẪN</span>
+          <h2>Sản phẩm khuyến mãi</h2>
+          <p>Thỏa sức mua sắm với những mức giá ưu đãi.</p>
+        </div>
+        <div id="products-KM" class="product-list"></div>
+      </section>
+
+      <!-- PHẦN 6: TIN TỨC -->
+      <section class="news-4">
+        <div class="section-4">
+          <span class="section-4">TIN TỨC CỬA HÀNG</span>
+          <h2>Tin tức PHONE STORE</h2>
+          <p>Cập nhật thông tin và hoạt động của cửa hàng.</p>
+        </div>
+        <div id="tintuc-news" class="news-content"></div>
+      </section>
+
+      <!-- PHẦN 7: THU CŨ ĐỔI MỚI -->
+      <section class="trade-section">
+        <div class="trade-content">
+          <div class="trade-text">
+            <span class="section-label">LÊN ĐỜI CÔNG NGHỆ</span>
+            <h2>Thu cũ đổi mới 1-1</h2>
+            <p>Đổi thiết bị cũ, nâng cấp thiết bị mới. Nhanh chóng, tiện lợi và tiết kiệm.</p>
+            <p class="trade-highlight">Hỗ trợ ưu đãi lên đến 20%.</p>
+            <a href="products.html" class="btn-trade"> Xem sản phẩm </a>
+          </div>
+          <div id="1doi-1" class="trade-image"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PHẦN 8: FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>PHONE STORE</h2>
+          <p>Công nghệ trong tầm tay.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Thông tin liên hệ</h3>
+          <p>Điện thoại: 038241855</p>
+          <p>Địa chỉ: Quận 12, TP. Hồ Chí Minh</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 PHONE STORE. All rights reserved.</div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="data.js"></script>
+    <script src="header.js"></script>
+  </body>
+</html>

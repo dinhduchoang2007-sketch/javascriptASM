@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng - PHONE STORE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html" class="tenShop">PHONE STORE</a>
+        <p class="slogan">Công nghệ trong tầm tay</p>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html" class="menu-link">Trang chủ</a>
+        <a href="products.html" class="menu-link">Sản phẩm</a>
+        <a href="dangKi.html" class="menu-link">Đăng ký</a>
+        <a href="dangNhap.html" class="menu-link">Đăng nhập</a>
+        <a href="cart.html" class="menu-link active">Giỏ hàng</a>
+      </nav>
+      <span id="tenNguoiDung"></span>
+      <button id="btnDangXuat" type="button">Đăng xuất</button>
+      <div class="thanhTimKiem">
+        <input type="text" id="timKiem" placeholder="Tìm kiếm iPhone, điện thoại..." />
+        <button type="button" onclick="timKiemSanPham()">Tìm kiếm</button>
+      </div>
+    </header>
+
+    <main class="trangGioHang">
+      <div class="tieuDeGioHang">
+        <p class="chuNho">PHONE STORE / GIỎ HÀNG</p>
+        <h1>Giỏ hàng của bạn</h1>
+        <p>Kiểm tra sản phẩm trước khi đặt hàng.</p>
+      </div>
+
+      <div class="boCucThanhToan">
+        <section class="khuVucSanPham">
+          <div class="tieuDeKhuVuc">
+            <h2>Sản phẩm đã chọn</h2>
+            <a href="products.html"> Tiếp tục mua hàng</a>
+          </div>
+
+          <div id="cart-sanPham"></div>
+        </section>
+
+        <aside class="khuVucTongTien">
+          <h2>Thông tin đơn hàng</h2>
+
+          <div id="cart-ThanhToan"></div>
+
+          <div class="camKetThanhToan">
+            <p>✓ Kiểm tra kỹ thông tin nhận hàng</p>
+            <p>✓ Tổng tiền cập nhật theo số lượng</p>
+            <p>✓ Hỗ trợ tư vấn khi cần</p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="khuVucThongTin">
+        <h2>Thông tin nhận hàng</h2>
+        <p class="moTaForm">Vui lòng nhập thông tin để cửa hàng liên hệ xác nhận đơn.</p>
+
+        <form id="formDatHang">
+          <div class="luoiForm">
+            <div class="nhomForm">
+              <label for="hoTen">Họ và tên *</label>
+              <input type="text" id="hoTen" placeholder="Nhập họ và tên" required />
+            </div>
+
+            <div class="nhomForm">
+              <label for="soDienThoai">Số điện thoại *</label>
+              <input
+                type="tel"
+                id="soDienThoai"
+                placeholder="Nhập số điện thoại"
+                pattern="[0-9]{10,11}"
+                title="Số điện thoại gồm 10 hoặc 11 chữ số"
+                required
+              />
+            </div>
+
+            <div class="nhomForm formRong">
+              <label for="diaChi">Địa chỉ nhận hàng *</label>
+              <input
+                type="text"
+                id="diaChi"
+                placeholder="Số nhà, đường, phường/xã, tỉnh/thành"
+                required
+              />
+            </div>
+
+            <div class="nhomForm formRong">
+              <label for="ghiChu">Ghi chú</label>
+              <textarea id="ghiChu" rows="3" placeholder="Ghi chú cho cửa hàng (nếu có)"></textarea>
+            </div>
+          </div>
+
+          <div class="nhomForm">
+            <label for="phuongThuc">Phương thức thanh toán</label>
+            <select id="phuongThuc">
+              <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+              <option value="chuyenkhoan">Chuyển khoản thủ công</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btnDatHang">Xác nhận đặt hàng</button>
+
+          <p class="ghiChuThanhToan">* Đây là chức năng đặt hàng mô phỏng cho bài tập.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>PHONE STORE</h2>
+          <p>Công nghệ trong tầm tay.</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Thông tin liên hệ</h3>
+          <p>Điện thoại: 038241855</p>
+          <p>Địa chỉ: Quận 12, TP. Hồ Chí Minh</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 PHONE STORE. All rights reserved.</div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="data.js"></script>
+    <script src="header.js"></script>
+  </body>
+</html>
